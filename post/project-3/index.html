@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Predicting Income and Gender with Census Data | Mrinmoy Bhaumik</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Predicting income and gender with Census data using different classification models and evaluation metrics">
+    <meta name="generator" content="Hugo 0.92.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Predicting Income and Gender with Census Data" />
+<meta property="og:description" content="Predicting income and gender with Census data using different classification models and evaluation metrics" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-3/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-10-20T11:13:32-04:00" />
+<meta property="article:modified_time" content="2020-10-20T11:13:32-04:00" /><meta property="og:site_name" content="Mrinmoy Bhaumik" />
+
+<meta itemprop="name" content="Predicting Income and Gender with Census Data">
+<meta itemprop="description" content="Predicting income and gender with Census data using different classification models and evaluation metrics"><meta itemprop="datePublished" content="2020-10-20T11:13:32-04:00" />
+<meta itemprop="dateModified" content="2020-10-20T11:13:32-04:00" />
+<meta itemprop="wordCount" content="234">
+<meta itemprop="keywords" content="census,gender,income,support vector,k-nearest neighbors,random forest,gradient boost,logistic regression," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Predicting Income and Gender with Census Data"/>
+<meta name="twitter:description" content="Predicting income and gender with Census data using different classification models and evaluation metrics"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://mrinmoybhaumik.github.io/Mrin_Portfolio/images/people_map_lo-res.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Mrinmoy Bhaumik
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/publications/" title="Publications page">
+              Publications
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://www.linkedin.com/in/mrinmoy-bhaumik-bb60a916/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:{{ .fill }};"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Predicting Income and Gender with Census Data</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Predicting income and gender with Census data using different classification models and evaluation metrics
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-3/&amp;title=Predicting%20Income%20and%20Gender%20with%20Census%20Data" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:{{ .fill }};"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Predicting Income and Gender with Census Data</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-10-20T11:13:32-04:00">October 20, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>In this project we try to predict income and gender using US Census Data.  We will use classification models to try to predict both variables.<br>
+Before we try out the different classification models there was some data exploration and processing that had to occur first:
+1 - Since income data was a numerical variable, we changed it to a categorical variable where the income was either &lt;= 50k or &gt;50k.
+2 - We deal with missing and duplicate values
+3 - Removal of outliers
+4 - Correlation between features
+5 - One-hot-encoding categorical variables
+6 - Splitting data into training and test Data</p>
+<p>After that is done we start to run and evaluate models with the following metrics:</p>
+<p>1 - Accuracy</p>
+<p>2 - Precision/Recall</p>
+<p>3 - F-1 Score</p>
+<p>The different models that are used  in this project were:</p>
+<p>1 - Support Vector Machines</p>
+<p>2 - K-Nearest neighbors</p>
+<p>3 - Random forest</p>
+<p>4 - Gradient Boosting</p>
+<p>5 - Logistic Regression</p>
+<p>We were able to create prediction models for income and gender with over an 85% accuracy.  Gradient boosting came out as the best working model for both cases.</p>
+<p>Later in the project we looked over feature importance within the Census data and then did a GridSearch for each of the types of models to determine the best parameters before running the actual models.  The complete workbook can be found within the Github link</p>
+<figure><img src="https://mrinmoybhaumik.github.io/Mrin_Portfolio/images/genderincome.jpg"/>
+</figure>
+
+<figure><img src="https://mrinmoybhaumik.github.io/Mrin_Portfolio/images/genderincome2.jpg"/>
+</figure>
+
+<p><a href="https://github.com/MrinmoyBhaumik/MLLabs/blob/master/Machine%20Learning%20Labs/Lab%2002%20Final.ipynb">Github Repository</a></p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/census" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">census</a>
+   </li>
+  
+   <li class="list">
+     <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/gender" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gender</a>
+   </li>
+  
+   <li class="list">
+     <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/income" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">income</a>
+   </li>
+  
+   <li class="list">
+     <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/support-vector" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">support vector</a>
+   </li>
+  
+   <li class="list">
+     <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/k-nearest-neighbors" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">k-nearest neighbors</a>
+   </li>
+  
+   <li class="list">
+     <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/random-forest" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">random forest</a>
+   </li>
+  
+   <li class="list">
+     <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/gradient-boost" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gradient boost</a>
+   </li>
+  
+   <li class="list">
+     <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/logistic-regression" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">logistic regression</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-2/">Predicting Kobe Bryant Shot Selection</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/" >
+    &copy;  Mrinmoy Bhaumik 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://www.linkedin.com/in/mrinmoy-bhaumik-bb60a916/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:{{ .fill }};"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

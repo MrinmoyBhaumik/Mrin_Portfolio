@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>support vector on Mrinmoy Bhaumik</title>
+    <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/support-vector/</link>
+    <description>Recent content in support vector on Mrinmoy Bhaumik</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Oct 2020 11:13:32 -0400</lastBuildDate><atom:link href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/tags/support-vector/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Predicting Income and Gender with Census Data</title>
+      <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-3/</link>
+      <pubDate>Tue, 20 Oct 2020 11:13:32 -0400</pubDate>
+      
+      <guid>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-3/</guid>
+      <description>In this project we try to predict income and gender using US Census Data. We will use classification models to try to predict both variables.
+Before we try out the different classification models there was some data exploration and processing that had to occur first: 1 - Since income data was a numerical variable, we changed it to a categorical variable where the income was either &amp;lt;= 50k or &amp;gt;50k. 2 - We deal with missing and duplicate values 3 - Removal of outliers 4 - Correlation between features 5 - One-hot-encoding categorical variables 6 - Splitting data into training and test Data</description>
+    </item>
+    
+  </channel>
+</rss>

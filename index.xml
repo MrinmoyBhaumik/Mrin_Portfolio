@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mrinmoy Bhaumik: Data Science Portfolio on Mrinmoy Bhaumik</title>
+    <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/</link>
+    <description>Recent content in Mrinmoy Bhaumik: Data Science Portfolio on Mrinmoy Bhaumik</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Apr 2021 11:14:48 -0400</lastBuildDate><atom:link href="https://mrinmoybhaumik.github.io/Mrin_Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recognizing Handwritten Letters with Neural Networks</title>
+      <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-4/</link>
+      <pubDate>Mon, 19 Apr 2021 11:14:48 -0400</pubDate>
+      
+      <guid>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-4/</guid>
+      <description>The goal of this project was to create a convolutional neural network (CNN) model that can recognize handwriting from the first five letters in the alphabet (A,B,C,D,E). We had to use transfer learning in order to create a model that can do that. Transfer learning is when a machine learning model that is trained to solve one problem is applied to solve a different but related problem. In this scenario we used a CNN that was trained to recognize handwritten digits and applied it to recognizing handwritten letters.</description>
+    </item>
+    
+    <item>
+      <title>Predicting Income and Gender with Census Data</title>
+      <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-3/</link>
+      <pubDate>Tue, 20 Oct 2020 11:13:32 -0400</pubDate>
+      
+      <guid>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-3/</guid>
+      <description>In this project we try to predict income and gender using US Census Data. We will use classification models to try to predict both variables.
+Before we try out the different classification models there was some data exploration and processing that had to occur first: 1 - Since income data was a numerical variable, we changed it to a categorical variable where the income was either &amp;lt;= 50k or &amp;gt;50k. 2 - We deal with missing and duplicate values 3 - Removal of outliers 4 - Correlation between features 5 - One-hot-encoding categorical variables 6 - Splitting data into training and test Data</description>
+    </item>
+    
+    <item>
+      <title>Predicting Kobe Bryant Shot Selection</title>
+      <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-2/</link>
+      <pubDate>Mon, 13 Apr 2020 11:00:59 -0400</pubDate>
+      
+      <guid>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-2/</guid>
+      <description>Kobe Bryant was a prolific American professional basketball player, and is considered one of the greatest players in the history of the game. We are provided with the location and circumstances of every shot attempted by Bryant during his 20-year career.
+The goal of the project is twofold: 1st -	Model the data to predict whether the shot was made successfully or not on the test dataset, given the model data set.</description>
+    </item>
+    
+    <item>
+      <title>Predicting Housing Prices in Russia</title>
+      <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-1/</link>
+      <pubDate>Mon, 17 Feb 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://mrinmoybhaumik.github.io/Mrin_Portfolio/post/project-1/</guid>
+      <description>Sberbank, Russia’s oldest and largest banks, wants to help their customers to make predictions about realty prices. We are given a data set that includes 5000 properties which includes the sale price as well as 72 other features about each observation. Our goal is to create a model that can predict the individual property prices with the data set given as accurately as possible.
+ Github Repository</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mrinmoybhaumik.github.io/Mrin_Portfolio/contact/</guid>
+      <description>   Platform URL     LinkedIn: https://www.linkedin.com/in/mrinmoy-bhaumik-bb60a916/   Github: https://github.com/MrinmoyBhaumik   Email: mrinmoy.bhaumik@gmail.com    </description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://mrinmoybhaumik.github.io/Mrin_Portfolio/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mrinmoybhaumik.github.io/Mrin_Portfolio/publications/</guid>
+      <description>Emotion Integrated Music Recommendation System Using Generative Adversarial Networks - https://scholar.smu.edu/datasciencereview/vol5/iss3/4/</description>
+    </item>
+    
+  </channel>
+</rss>
